@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}GSM{% endblock %}
+
+{% block page_content %}
+<div class="page_header">
+    <div class="row">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4 text-center">
+            <h1>Goodwill Schedule Manager</h1>
+        </div>
+    </div>
+    <div class="col-lg-4"></div>
+    <div class="col-lg-4 text-center">
+        {% block upload %}
+        {{ wtf.quick_form(form) }}
+        {% endblock %}
+    </div>
+</div>
+{% endblock %}
