@@ -1,6 +1,9 @@
 from copy import deepcopy
 
 
+"""Makes it easier for build_output to do its job"""
+
+
 def translate_for_output(week):
     final_draft = deepcopy(week)
 

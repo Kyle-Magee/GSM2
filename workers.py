@@ -1,7 +1,3 @@
-from datetime import timedelta
-# Working on setting max hours for Part time workers
-
-
 class Employee:
     """De-facto employee characteristic tree. Contains the basic info
     for a fulltime employee regardless of position."""
@@ -88,64 +84,3 @@ class Manager(Cashier, Employee):
 
     def __init__(self, name, **kwargs):
         Employee.__init__(self, name, position='manager', **kwargs)
-
-
-
-if '__name__' == 'x':
-    from random import choice
-    maria = Employee('Maria')
-    dory = Employee('Dory')
-    myra = Employee('Myra')
-    lily = Employee('Lily')
-    juan = Parttime('Juan')
-    armando = Parttime('Armando')
-    chelsea = ParttimeCashier('Chelsea')
-    tina = ParttimeCashier('Tina')
-    kyle = Parttime('Kyle')
-    luis = Parttime('Luis')
-    employees = [maria, dory, myra, lily, juan, armando, chelsea, tina, kyle, luis]
-'''
-    x = [f for f in employees if f.available_days['monday']]
-    y = [f for f in x if timedelta(hours=8, minutes=45) in f.available_shifts['opening']]
-    for i in range(20):
-        k = choice(y)
-        k.give_hours()
-    j = sorted(y, key=lambda hours: hours.hours_worked - hours.max_hours)
-    print([(x.name, x.hours_worked, x.max_hours, x.max_hours - x.hours_worked ) for x in j])
-    #print(y)
-    monday = []
-    tuesday = []
-    wednesday = []
-    week = [monday, tuesday, wednesday]
-    for day in week:
-        pool = list(employees)
-        for i in range(2):
-            for shift in stacy.available_shifts:
-                victim = choice(pool)
-                day.append(victim)
-                pool.remove(victim)
-
-    for day in week:
-        print(day)
-        '''
-
-'''
-    print('May ',)
-
-    for x in may.available_shifts:
-        for i in may.available_shifts[x]:
-            print(x, str(i))
-    print('Joe ', )
-    for x in joe.available_shifts:
-        for i in joe.available_shifts[x]:
-            print(x, str(i))
-    print('Kyle')
-    for x in kyle.available_shifts:
-        for i in kyle.available_shifts[x]:
-            print(x, str(i))
-
-    print('Jane', )
-    for x in jane.available_shifts:
-        for i in jane.available_shifts[x]:
-            print(x, str(i))
-    '''

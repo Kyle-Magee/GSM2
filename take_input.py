@@ -1,6 +1,8 @@
 from openpyxl import load_workbook
 from workers import Employee, Parttime, ParttimeCashier, ParttimePricer, Pricer, Cashier, Manager
 
+"""Makes sense of the information in the Excel Template"""
+
 
 def excel_sheet(filename):
     wb = load_workbook(filename)

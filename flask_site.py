@@ -1,4 +1,4 @@
-from flask import Flask, redirect, url_for, send_file, render_template, session, flash, request, send_from_directory
+from flask import Flask, redirect, url_for, render_template, session, send_from_directory
 from flask_bootstrap import Bootstrap
 from flask_wtf import Form
 from wtforms import StringField, SubmitField, FileField
@@ -12,6 +12,7 @@ app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = os.getcwd()
 bootstrap = Bootstrap(app)
 app.config['SECRET_KEY'] = config.secret_key
+
 
 class DateForm(Form):
     date = StringField('Enter Start Date', validators=[DataRequired()])
@@ -33,7 +34,7 @@ def home_page():
     return render_template('index.html', form=form, date=session.get('date'))
 
 
-@app.route('/<date>', methods=['GET', 'POST'])
+@app.route('/<date>.xlsx', methods=['GET', 'POST'])
 def upload(date):
     u_form = FileForm()
     if u_form.validate_on_submit():

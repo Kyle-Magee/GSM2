@@ -2,6 +2,9 @@ from random import choice
 from take_input import excel_sheet
 
 
+"""Scheduling algorithm"""
+
+
 class Weekday:
 
     @staticmethod
@@ -53,12 +56,3 @@ def make_a_schedule(filename):
         week[day].buff_schedule('secondary')
 
     return week
-
-
-
-
-
-
-
-
-
