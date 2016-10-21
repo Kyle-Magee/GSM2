@@ -3,3 +3,8 @@
 
 
 {% block title %}Upload Template{% endblock %}
+{%  block upload %}
+    <div class="form-inline" >
+        {{ wtf.quick_form(form) }}
+    </div>
+{% endblock %}
