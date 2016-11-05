@@ -52,6 +52,12 @@ def about():
     return render_template('about.html')
 
 
+@app.route('/robots.txt')
+def robots():
+    cwd = os.path.abspath(os.path.dirname(__file__))
+    return send_from_directory(cwd, 'robots.txt')
+
+
 @app.route('/Goodwill_schedule.xlsx')
 def send_temp():
     return send_file(filename_or_fp='Goodwill_schedule.xlsx')
