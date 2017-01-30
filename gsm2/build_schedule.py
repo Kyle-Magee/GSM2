@@ -1,5 +1,5 @@
 from random import choice
-from take_input import excel_sheet
+from .take_input import excel_sheet
 
 
 """Scheduling algorithm"""

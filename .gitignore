@@ -56,3 +56,10 @@ docs/_build/
 
 # PyBuilder
 target/
+
+#private
+config*
+venv/
+static/
+__pycache__/
+.idea/

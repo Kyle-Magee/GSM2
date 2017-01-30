@@ -1,5 +1,5 @@
-from build_schedule import make_a_schedule
-from translate_for_output import translate_for_output
+from .build_schedule import make_a_schedule
+from .translate_for_output import translate_for_output
 from openpyxl import load_workbook
 
 
